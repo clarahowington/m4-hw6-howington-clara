@@ -62,9 +62,19 @@ function getPizzaOrder() {
   // if order is NOT for delivery, set pizza.saleType to "take-out"
   // if order if for delivery, add deliveryFee to pizza.cost
   // YOUR CODE HERE
-
+  if (pizza.isDelivery = isDelivery) {
+    console.log(pizza.isDelivery)
+    if (pizza.isDelivery === true) {
+      pizza.saleType === delivery
+      pizza.cost += deliveryFee
+    if (pizza.isDelivery === false) {
+      pizza.saleType === takeout
+    }
+    }
+  }
   return pizza
 }
+// define the saleType above to fix the problem ^ 
 
 // This function is attached to the Order Now Button
 // This function is COMPLETE. No work to do here
