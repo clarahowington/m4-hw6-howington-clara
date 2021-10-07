@@ -48,7 +48,7 @@ function getPizzaOrder() {
   // YOUR CODE HERE
 
   if (pizza.extraCheese = extraCheese) {
-    console.log(pizza.extraCheese)
+    console.log(typeof true, pizza.extraCheese)
     if (pizza.extraCheese === true) {
       pizza.cost += extraCheeseUpcharge
     }
@@ -63,18 +63,18 @@ function getPizzaOrder() {
   // if order if for delivery, add deliveryFee to pizza.cost
   // YOUR CODE HERE
   if (pizza.isDelivery = isDelivery) {
-    console.log(pizza.isDelivery)
+    console.log(typeof true, pizza.isDelivery)
     if (pizza.isDelivery === true) {
-      pizza.saleType === delivery
-      pizza.cost += deliveryFee
+      console.log(pizza.saleType = 'delivery')
+    pizza.cost += deliveryFee 
     if (pizza.isDelivery === false) {
-      pizza.saleType === takeout
-    }
+      console.log(pizza.saleType = 'takeout')
     }
   }
+}
   return pizza
 }
-// define the saleType above to fix the problem ^ 
+// define the saleType above to fix the problem ^  
 
 // This function is attached to the Order Now Button
 // This function is COMPLETE. No work to do here
