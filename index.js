@@ -38,8 +38,14 @@ function getPizzaOrder() {
   // if the user has added toppings, add toppingsFee multiplied by
   // the number of toppings added to pizza.cost
   // YOUR CODE HERE
-
-
+  if (toppings == ""){
+    pizza.toppings = []
+  } 
+  else {
+    pizza.toppings = toppings.split(",") 
+    console.log(pizza.toppings)
+  }
+  pizza.cost += toppingsFee * pizza.toppings.length
 
   var extraCheese = confirm("Would you like extra cheese?")
   // HINT: confirm() returns a boolean
@@ -47,14 +53,11 @@ function getPizzaOrder() {
   // if the user specifies extra cheese, add extraCheeseUpcharge to pizza.cost
   // YOUR CODE HERE
 
-  if (pizza.extraCheese = extraCheese) {
-    console.log(typeof true, pizza.extraCheese)
-    if (pizza.extraCheese === true) {
-      pizza.cost += extraCheeseUpcharge
-    }
+  pizza.extraCheese = extraCheese
+  if (extraCheese){
+    console.log(pizza.extraCheese)
+    pizza.cost += extraCheeseUpcharge;
   }
-
-
 
   var isDelivery = confirm("Is your order for Delivery?")
   // HINT: confirm() returns a boolean
@@ -62,16 +65,16 @@ function getPizzaOrder() {
   // if order is NOT for delivery, set pizza.saleType to "take-out"
   // if order if for delivery, add deliveryFee to pizza.cost
   // YOUR CODE HERE
-  if (pizza.isDelivery = isDelivery) {
-    console.log(typeof true, pizza.isDelivery)
-    if (pizza.isDelivery === true) {
-      console.log(pizza.saleType = 'delivery')
-    pizza.cost += deliveryFee 
-    if (pizza.isDelivery === false) {
-      console.log(pizza.saleType = 'takeout')
-    }
+  if (isDelivery){
+    console.log(isDelivery)
+    pizza.saleType = "delivery"
+    pizza.cost += deliveryFee
   }
-}
+  else {
+    console.log(isDelivery)
+    pizza.saleType = "take-out"
+  }
+
   return pizza
 }
 // define the saleType above to fix the problem ^  
